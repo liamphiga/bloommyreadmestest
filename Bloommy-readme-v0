@@ -1,0 +1,172 @@
+# Bloommy – README Completo
+
+---
+
+# 🌸 Bloommy – Jardim da Saúde Mental
+
+## 📖 Visão Geral
+
+**Nome do App:** Bloommy (com dois "o" e dois "m")
+
+**Tema:** Um jardim digital focado em bem-estar emocional.
+
+**Missão:** Ajudar as pessoas a acompanharem seu estado emocional e se conectarem com suporte e cultura de forma acolhedora.
+
+**Público-alvo:** Pessoas de qualquer idade interessadas em autocuidado emocional, reflexão, terapia e cultura.
+
+---
+
+## 🌿 Objetivos
+
+- Criar um espaço leve e motivador para check-ins emocionais diários.
+- Facilitar o acesso a psicólogos especializados.
+- Oferecer recomendações culturais como apoio emocional.
+- Estimular hábitos diários saudáveis de autoconhecimento.
+
+---
+
+## 📂 Estrutura Principal do App
+
+### 1. Tela Inicial (Home - Jardim)
+- Ganhar uma **semente** diariamente que desabrocha em uma **flor real**.
+- Adicionar a flor no seu **Jardim Pessoal**.
+- Check-in emocional: registrar o humor diariamente.
+- Calendário visualizando humor e flores.
+
+### 2. Sessão de Psicólogos
+- Lista de psicólogos:
+  - Nome, idade, experiência, especialidade.
+  - Preferências culturais: filmes, livros, músicas.
+- Consulta agendada usando **moedas-flores**.
+- Sistema de **matchmaking com IA** baseado no perfil emocional.
+
+### 3. Sessão de Recomendações
+- Acervo de filmes, livros, palestras, séries, artes.
+- Categorização por situações emocionais (luto, burnout, autoestima).
+- Recomendação Diária automática:
+  - Segunda: Livro 📚
+  - Terça: Palestra 🎤
+  - Sexta: Série 🎥
+  - Sábado: Filme 🎬
+  - Domingo: Arte 🎨
+- Interação social: "dar flores" para as recomendações.
+
+### 4. Customização de Avatar
+- Criar avatar estilo **Mii**.
+- Opções de customização: pele, cabelo, roupas.
+- Avatares aparecem na tela de recomendações.
+
+### 5. Mecânica de Flores
+- **Flores** = Moeda do App.
+- Ganhar flores:
+  - Ao abrir o app.
+  - Ao fazer check-in emocional.
+  - Ao interagir com recomendações.
+- Gastar flores:
+  - Agendar sessões de terapia.
+  - Valorizar conteúdos.
+
+### 6. Interação Social
+- Enviar flores para amigos.
+- Enviar mensagens motivacionais personalizadas.
+
+---
+
+# 🌐 Estilo Visual (UI/UX)
+
+- **Cores:** Verde claro, lilás, azul pastel, rosa suave.
+- **Design:** Minimalista, leve, acolhedor.
+- **Tipografia:** Sans-serif amigável (Inter, Poppins).
+- **Elementos Visuais:**
+  - Flores, sementes, calendários visuais.
+  - Avatares simples e expressivos.
+- **Animações:**
+  - Germinação de flores.
+  - Avatares caminhando.
+  - Transições suaves entre telas.
+
+---
+
+# 🛠️ Desenvolvimento e Stack Tecnológica
+
+## Tecnologias Sugeridas
+
+- **Next.js (App Router)**
+- **TailwindCSS**
+- **React Context API** (gestão global de flores, humor, login)
+- **Vercel v0.dev** para gerar componentes via IA
+- **Supabase ou Firebase** (para persistência futura)
+
+## Estrutura de Pastas Sugerida
+
+```bash
+/app
+  page.tsx (Jardim - Home)
+/components
+  FlowerBloom.tsx
+  DailyCheckin.tsx
+  PsychologistList.tsx
+  PsychologistCard.tsx
+  Recommendations.tsx
+  AvatarCustomizer.tsx
+/context
+  FlowerContext.tsx
+/public
+  (flores, sementes, avatares)
+```
+
+## Fases de Desenvolvimento
+
+1. **Iniciar o Projeto**
+   - Scaffold Next.js + TailwindCSS.
+   - Criar FlowerContext.tsx para gestão de flores.
+
+2. **Construir Tela do Jardim (Home)**
+   - DailyCheckin.tsx (Check-in Emocional).
+   - FlowerBloom.tsx (Ganho de flores).
+   - Calendário de humor.
+
+3. **Construir Sessão de Psicólogos**
+   - PsychologistList.tsx.
+   - Matchmaking IA.
+
+4. **Construir Sessão de Recomendações**
+   - Recommendations.tsx.
+   - Sistema de "dar flores" para conteúdos.
+
+5. **Construir Customização de Avatares**
+   - AvatarCustomizer.tsx.
+
+6. **Adicionar Interação Social**
+   - Mensagens positivas.
+   - Sistema de envio de flores.
+
+7. **Refinar e Testar Tudo**
+   - Melhorar UI.
+   - Validar responsividade mobile e desktop.
+
+---
+
+# 🔄 Fluxo do App
+
+```plaintext
+(Abertura do app)
+  → (Recebe semente -> flor -> moeda)
+  → (Home: Jardim + Check-in)
+    ↳ Arrastar Direita: Psicólogos
+    ↳ Arrastar Esquerda: Recomendações
+    ↳ Arrastar Cima: Configurações
+    ↳ Arrastar Baixo: Visualizar Calendário
+```
+
+---
+
+# 🌟 Missão Final
+
+O Bloommy quer ser **um jardim de emoções positivas** para quem precisa de acolhimento, autoconhecimento e florescimento pessoal.
+
+Siga este README como seu guia passo a passo para construir esse ambiente de cuidado e crescimento!
+
+---
+
+# 🌺 Let's Bloom Together! 💫
