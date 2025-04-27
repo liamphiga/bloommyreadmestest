@@ -1,0 +1,199 @@
+# Bloommy 🌸 – Guia Completo de Desenvolvimento
+
+> **Bloommy** é um app de saúde mental que se apresenta como um **jardim vivo**, onde cada interação do usuário faz brotar flores, reforçando o cuidado emocional de forma lúdica, artística e social.
+
+---
+
+## 📚 Sumário
+
+1. [Visão Geral](#visão-geral)
+2. [Objetivos do Produto](#objetivos-do-produto)
+3. [Arquitetura e Tecnologias](#arquitetura-e-tecnologias)
+4. [Estrutura e Funcionalidades](#estrutura-e-funcionalidades)
+   - Jardim Principal
+   - Check‑in Emocional
+   - Psicólogos e Matchmaking
+   - Recomendações de Arte
+   - Avatar Personalizado
+   - Interação Social e Flores
+5. [Fluxo de Navegação](#fluxo-de-navegação)
+6. [Art Style e Inspirações Detalhadas](#art-style-e-inspirações-detalhadas)
+   - Quabble
+   - Flora
+   - Habits Garden
+7. [Guia de Construção do Código](#guia-de-construção-do-código)
+   - Fase 1: Scaffold
+   - Fase 2: Contexto e Estado
+   - Fase 3: UI/UX Principais
+   - Fase 4: Backend & Persistência
+   - Fase 5: Mobile & Web Adaptation
+8. [Critérios de Sucesso](#critérios-de-sucesso)
+9. [Recomendações de Ferramentas de Deploy](#recomendações-de-ferramentas-de-deploy)
+10. [Considerações Finais](#considerações-finais)
+
+---
+
+## Visão Geral
+
+**Bloommy** é um ambiente digital de cuidado emocional, que utiliza a metáfora de um jardim para:
+
+- **Visualizar** o estado mental do usuário através de flores diárias.
+- **Conectar** a comunidade com psicólogos especializados.
+- **Inspirar** com recomendações artísticas adaptadas ao humor.
+- **Encantar** com uma interface que parece uma obra de arte viva.
+
+Ao abrir o app, o usuário ganha uma semente que brota em uma flor real, representando um cuidado gentil consigo mesmo. Flores são também moeda de interação, sem contagem de dias seguidos para evitar ansiedade.
+
+---
+
+## Objetivos do Produto
+
+1. **Empatia & Acolhimento**: criar um espaço onde o usuário se sinta seguro para expressar emoções.
+2. **Acessibilidade**: facilitar o acesso a psicólogos e recursos de saúde mental.
+3. **Arte como Terapia**: usar recomendações de cultura (livros, filmes, artes) para apoiar processos emocionais.
+4. **Gamificação Positiva**: motivar pelo belo e sem pressão de streaks.
+5. **Comunidade**: estimular conexões sociais saudáveis.
+
+---
+
+## Arquitetura e Tecnologias
+
+- **Frontend**: Next.js (App Router) + Tailwind CSS + React
+- **State Management**: React Context API para "FlowerContext" e humor
+- **Backend**: Node.js + Express ou Firebase Functions
+- **Banco de Dados**: Firebase Firestore ou Supabase (PostgreSQL)
+- **IA**: OpenAI API para chatbot de recomendações e matchmaking
+- **Deploy**: equipe escolherá (Heroku, Netlify, AWS Amplify, DigitalOcean App Platform)
+
+---
+
+## Estrutura e Funcionalidades
+
+### 🌸 Jardim Principal
+- Tela inicial: animação de semente → flor → incremento de saldo.
+- Calendário visual (SVG/Canvas) com flor e humor de cada dia, sem streak ou contador de dias.
+- Gestos mobile (swipe) e setas discretas no web.
+
+### 📝 Check‑in Emocional
+- Pergunta: "Como você está hoje?" (Bem/Normal/Não tão bem).
+- Ganha 1 flor por registro.
+- Registro no calendário e no contexto global.
+
+### 🧑‍⚕️ Psicólogos e Matchmaking
+- **PsychologistCard**: nome, idade, experiência, especialidade, abordagem (TCC, psicanálise, humanista), preferências culturais, custo em flores.
+- **Filtros**: especialidade, abordagem, custo.
+- **Match IA**: botão "Encontre meu psicólogo" usa perfil e humor para sugerir.
+- Agendamento deduz flores e reserva horário.
+
+### 🎨 Recomendações de Arte
+- Categorias por emoção (luto, ansiedade, burnout, autoestima).
+- Tipos: livros, filmes, séries, vídeos, quotes, palestras, artes visuais.
+- Interação: "dar flor" e "amei" para destacar.
+- Recomendações diárias fixas + IA personalizada.
+
+### 🧑‍🎨 Avatar Personalizado
+- Editor estilo Mii: pele, cabelo, roupas.
+- Avatar representado por SVG/Canvas 2D ou 3D leve.
+- Avatares aparecem lendo/assistindo nas recomendações.
+
+### 🌼 Interação Social e Flores
+- Enviar flores e mensagens motivacionais.
+- **Leaderboard suave**: ranking por flores doadas (sem streaks).
+- Notificações com partículas de pétalas.
+
+---
+
+## Fluxo de Navegação
+
+```plaintext
+Home (Jardim) ⇆ Psicólogos ⇆ Recomendações ⇆ Avatar
+```
+- Mobile: swipe left/right/up/down
+- Web: hover + click em setas discretas
+
+---
+
+## Art Style e Inspirações Detalhadas
+
+### 1. Quabble (https://quabble.app/)
+- **Cores pastéis**, mascote simpático, transições orgânicas.
+- Micro-interações que parecem ilustrações pintadas.
+- Ênfase em atividades sem métricas de streak.
+- Feed social suave com atividades de amigos.
+
+### 2. Flora (https://flora.appfinca.com/en/)
+- **Metáfora de plantas reais**: biomas, árvores, paisagens.
+- Feedback visual de crescimento gentil.
+- Tipografia clean, ícones simples.
+- Competição amistosa e colaborativa.
+
+### 3. Habits Garden (https://habitsgarden.com/my-habits)
+- Jardim de hábitos: cada hábito é planta.
+- Leaderboard por progresso acumulado.
+- Visual minimalista com foco no verde e crescimento.
+- Social: ver hábitos e progresso de amigos.
+
+**Inspirações aplicadas no Bloommy**:
+- Interface pictórica e imersiva.
+- Feedback orgânico (germinação, pétalas).
+- Sistema social sem pressão de streak.
+- Personalização de avatares e jardins.
+
+---
+
+## Guia de Construção do Código
+
+### Fase 1: Scaffold Inicial
+1. `pnpm create next-app . --ts --app`
+2. `npm install tailwindcss postcss autoprefixer`
+3. `npx tailwindcss init -p`
+4. Configurar `tailwind.config.js` e estilos globais.
+
+### Fase 2: Contexto e Estado
+- Criar `FlowerContext.tsx` com balance, addFlower, spendFlower.
+- Hook `useFlowers()`.
+
+### Fase 3: UI/UX Principais
+- **FlowerBloom**: animação CSS de germinação.
+- **DailyCheckin**: buttons de humor e addFlower.
+- **PsychologistList/Card**.
+- **Recommendations** Tabs + listagem + IA stub.
+- **AvatarCustomizer**.
+
+### Fase 4: Backend & Persistência
+- Modelagem Firestore: users, moods, flowers, psychologists, recommendations.
+- API routes Next.js para CRUD.
+- Integração com OpenAI para matchmaking.
+
+### Fase 5: Mobile & Web Adaptation
+- Testar responsividade.
+- Implementar swipes com `react-swipeable`.
+- Setas web com CSS hover.
+
+---
+
+## Critérios de Sucesso
+
+- UX sem ansiedade: nenhum contador de streak.
+- Engajamento social: envio de flores, leaderboard.
+- Qualidade artística: aprovação de UI pelos designers.
+- Funcionalidade: agendamento de psicólogo + recomendações IA.
+
+---
+
+## Recomendações de Deploy
+
+Equipe livre para escolher:
+- **Heroku**, **Netlify**, **AWS Amplify**, **DigitalOcean App Platform** etc.
+- Garantir SSL, CI/CD e deploy automático.
+
+---
+
+## Considerações Finais
+
+Este README serve como **documento principal** para guiar o time no desenvolvimento do Bloommy:
+- **Arte**: imersiva e suave.
+- **Funções**: completas e livres de ansiedade.
+- **Social**: encorajador, colaborativo.
+
+Vamos juntos cultivar um jardim digital de bem-estar! 🌻
