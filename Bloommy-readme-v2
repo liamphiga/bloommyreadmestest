@@ -1,0 +1,153 @@
+# Bloommy - Guia Completo para Desenvolvimento do App
+
+## ✨ Sobre o Bloommy
+
+**Bloommy** é um aplicativo de saúde mental que mistura bem-estar emocional, gamificação e interação social em um ambiente acolhedor e artístico. Inspirado na metáfora de um jardim que floresce com o cuidado diário, o app utiliza flores virtuais como moeda de interação, terapia e recompensas.
+
+O objetivo é oferecer aos usuários um espaço leve e acolhedor para acompanhar suas emoções, realizar check-ins de humor, acessar recomendações de arte e cultura relacionadas ao seu estado emocional e conectar-se a psicólogos especializados.
+
+---
+
+## 🎯 Objetivo do App
+
+- Criar um ambiente digital que seja uma extensão do emocional: um "jardim" que cresce com o autocuidado.
+- Tornar o processo de cuidar da saúde mental mais agradável, bonito e intuitivo.
+- Facilitar o acesso a psicólogos adequados para cada situação emocional.
+- Conectar as pessoas a conteúdos artísticos que auxiliem na jornada emocional.
+
+---
+
+## 🌸 Estrutura Principal do App
+
+O app será dividido em **três áreas principais**:
+
+1. **Jardim Pessoal**
+   - Tela inicial.
+   - Check-in diário ("Como você está se sentindo hoje?").
+   - Geração de uma flor com base no humor.
+   - Jardim pessoal onde flores são plantadas.
+   - Calendário visual dos sentimentos (sem streaks ou contadores de dias para evitar ansiedade).
+
+2. **Sessão de Psicólogos**
+   - Lista de psicólogos com:
+     - Nome
+     - Idade
+     - Anos de experiência
+     - Especialidade (luto, relacionamentos, ansiedade, etc.)
+     - Abordagem terapêutica (TCC, Psicanálise, Sistêmica, etc.)
+     - Preferências pessoais (filmes, séries, livros favoritos)
+     - Preço em moedas-flores por sessão.
+   - Matchmaking baseado no perfil do usuário.
+   - Agendamento direto com moeda-flores.
+
+3. **Recomendações de Arte**
+   - Biblioteca dividida por temas emocionais (luto, burnout, ansiedade, etc.).
+   - Livros, filmes, séries, cenas, quotes, vídeos, palestras.
+   - Recomendações diárias (segunda: livro; terça: palestra; sexta: série; sábado: filme; domingo: obra de arte).
+   - Sistema de avaliação com "flores" e reações positivas.
+   - Mini-IA para sugerir conteúdos baseados no humor e situação.
+
+---
+
+## 🌱 Moeda do App: Flores
+
+- **Flores** são ganhas ao fazer check-ins diários, avaliar conteúdos, e usar o app.
+- São usadas para:
+  - Agendar sessões com psicólogos.
+  - Presentear outros usuários.
+  - Trocar por pequenas recompensas dentro do app.
+
+---
+
+## 🎨 Art Style do Bloommy
+
+- **Inspiração:**
+  - Quabble: https://quabble.app/  → (principal referência estética)
+  - Flora: https://flora.appfinca.com/en/ → (ideia de "plantar" flores reais no app)
+  - Habits Garden: https://habitsgarden.com/my-habits → (conexão social através de hábitos e progresso)
+
+- **Características desejadas:**
+  - Visual limpo, suave e relaxante.
+  - Elementos que parecem pinturas feitas à mão.
+  - Cores suaves e pastéis (verde-menta, azul-claro, lilás, rosa-claro).
+  - Sem ruído visual: experiência "imersiva em uma obra de arte".
+  - Em celular: gestos de deslizar para mudar de telas (direita: psicólogos; esquerda: recomendações).
+  - Em web app: cursor aproximação → setas discretas para mudar de seção.
+
+**Observação:** Não queremos estética de "gamificação tradicional" (pontuação, conquistas exageradas). O Bloommy é um espaço tranquilo e artístico.
+
+---
+
+## 🛠️ Guia de Desenvolvimento Técnico
+
+### 🔹 Tecnologias Sugeridas
+
+- **Frontend:** Next.js + TailwindCSS + React
+- **Backend:** Node.js + Firebase ou Supabase
+- **Banco de Dados:** Firestore (Firebase) ou PostgreSQL
+- **Integração IA:** OpenAI API para recomendações e chatbot emocional
+- **Hospedagem:** Vercel (Web) / Expo (Mobile)
+
+### 🔹 Estrutura Inicial
+
+1. Criar projeto no Vercel (v0) para prototipação rápida.
+2. Criar design system no Figma ou Penpot para padronizar UI/UX.
+3. Dividir em microserviços:
+   - Auth: cadastro/login social
+   - Garden: controle das flores, check-ins e calendário
+   - Psychologists: cadastro e match dos psicólogos
+   - Arts: catálogo e avaliações de conteúdos
+   - Messaging: envio de mensagens positivas entre usuários
+
+### 🔹 Funcionalidades Essenciais por Sprint
+
+**Sprint 1: MVP**
+- Tela de Login / Registro
+- Tela de Home (Jardim e Check-in)
+- Geração diária de Flor
+- Sessão básica de psicólogos
+- Sessão básica de recomendações
+
+**Sprint 2: Expansão**
+- Match com psicólogos baseado em perfil
+- Mini-IA para sugestões
+- Criação do avatar (tipo Mii)
+- Jardinagem visual (arrastar e plantar flores)
+
+**Sprint 3: Social**
+- Dar flores para outros usuários
+- Ver pequenos avatares visitando recomendações
+- Sistema de notificações sociais
+
+**Sprint 4: Web**
+- Adaptar layout para web app com navegação por cursor e setas
+- Otimização mobile-first, responsividade
+
+---
+
+## 📚 Documentação Adicional
+
+- Documentar arquitetura no Notion / Trello.
+- Cada componente deve ter README próprio.
+- Fluxo de usuário mapeado em diagrama de fluxograma.
+- Wireframes validados antes de implementar.
+
+---
+
+## 📢 Nota Importante
+
+- O projeto pode evoluir, mas o espírito central **não pode se perder**:
+  - Não é um app "viciado" em métrica.
+  - É uma experiência emocional, artística e acolhedora.
+
+## 🎯 Inspirações Diretas
+
+- [Quabble](https://quabble.app/)
+- [Flora](https://flora.appfinca.com/en/)
+- [Habits Garden](https://habitsgarden.com/my-habits)
+
+**Para buscar inspiração visual, UX e interativa, recomendamos explorar os links acima.**
+
+---
+
+> "Bloom where you are planted." 🌸
