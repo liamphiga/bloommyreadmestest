@@ -1,0 +1,148 @@
+# 🌸 Bloommy – README Detalhado para Equipe de Desenvolvimento
+
+---
+
+## 📖 Visão Geral
+
+**Nome do App:** Bloommy (dois "o", dois "m")
+
+**Tema Central:** Um jardim vivo que reflete o estado emocional do usuário. Cada interação traz crescimento visual, como arte em movimento.
+
+**Missão:** Fornecer um ambiente digital que pareça uma obra de arte interativa, onde o cuidado com a saúde mental acontece de forma lúdica, acolhedora e sem pressão.
+
+**Público-alvo:** Pessoas que buscam apoio emocional diário, conexão com profissionais de saúde mental e recomendações culturais para autoconhecimento.
+
+---
+
+## 🌟 Objetivos Principais
+
+1. **Validar e apoiar emoções** sem criar ansiedade por disciplina (sem contadores de sequência).
+2. **Conectar usuários a psicólogos** com diferentes abordagens terapêuticas.
+3. **Oferecer recomendações artísticas** (filmes, livros, séries, artes) categorizadas por tema emocional.
+4. **Estimular hábitos saudáveis** de autocuidado via check-ins e recompensas visuais.
+5. **Proporcionar experiência imersiva**: a UI deve parecer uma pintura viva, não uma app comum.
+
+---
+
+## 🖼️ Estilo Visual & UX Imersivo
+
+- **Art Style:** Interface que pareça uma pintura ou vitral de jardim. Elementos orgânicos: pétalas, folhagens e pinceladas suaves.
+- **Layout:** Fundo translúcido com cenários sutis de jardim. Sobreposições leves de sombra e brilho.
+- **Animações:** Flores germinando, folhas balançando, partículas de pólen flutuando.
+- **Tipografia:** Fontes serifadas leves para títulos (ex.: Playfair Display) e sans-serif para corpo (ex.: Inter).
+- **Navegação Mobile:** Gestos de swipe (esquerda/direita/para cima/para baixo) sem exibir contadores de dias.
+- **Navegação Web:** Pequenas setas laterais e tooltips ao passar o cursor, mantendo a mesma experiência de 'swipe'.
+
+---
+
+## 🎨 Seções do App e Funcionalidades
+
+### 1. Jardim (Home)
+- **Objetivo:** Receber e plantar flores diárias sem pressionar o usuário a manter streak.
+- **Interação diária:** Ao abrir, animação de semente → flor real → ganho de 1 flor-moeda.
+- **Check-in Emocional:** Pergunta "Como você está hoje?" (Bem/Normal/Não tão bem). Ganha 1 flor sem linkar a contagem de dias.
+- **Calendário Visual:** Exibe flor e humor do dia como arte, sem numerar sequência.
+- **Gestos Mobile:**
+  - Swipe direita → Sessão Psicólogos
+  - Swipe esquerda → Recomendações de Arte
+  - Swipe para cima → Configurações
+  - Swipe para baixo → Calendário
+- **Navegação Web:** Setas semi-translúcidas nas bordas para trocar de seção.
+
+### 2. Psicólogos
+- **Lista de Cards** com:
+  - Foto/Avatar, Nome, Idade
+  - Abordagem Terapêutica (TCC, Psicanálise, Humanista, Gestalt, etc.)
+  - Especialidades (luto, relacionamentos, burnout, atletas)
+  - Preferências culturais (filme, livro, música favoritos)
+  - Custo em flores (ex.: 10 🌸 por 30min)
+- **Filtros Manuais:** Slider de custo, checkboxes de abordagem, especialidade.
+- **Match IA:** Botão "Encontre meu psicólogo" que sugere perfis com base no último check-in e preferências.
+- **Agendamento:** Deduz flores do saldo e bloqueia horário no calendário do psicólogo.
+
+### 3. Recomendações de Arte
+- **Categorias Temáticas:** Luto, Ansiedade, Trabalho, Autoestima, Burnout.
+- **Tipos de Conteúdo:** Livros, Filmes, Séries, Vídeos, Citações, Obras de Arte.
+- **Interação Social:** Usuários dão flores para conteúdos sem afetar streaks.
+- **Recomendação Diária:** Conteúdo fixo por dia da semana, + sugestões IA adaptadas ao humor.
+- **Avaliações:** "Amei" e flores virtuais para destacar itens.
+
+### 4. Avatar Personalizado
+- **Editor de Avatar** (estilo Mii minimalista): pele, cabelo, roupa.
+- **Visualização 3D leve** ou SVG interativo.
+- Avatares aparecem nas seções de Recomendações e Psicólogos como figurantes animados.
+
+### 5. Interação Social Positiva
+- **Enviar flores** e mensagens encorajadoras (ex.: "Continue crescendo!").
+- **Notificações suaves** no estilo de pétalas caindo, sem pop-ups invasivos.
+
+---
+
+## 🛠️ Guia de Implementação Técnica
+
+### Tecnologias Recomendadas
+- **Next.js (App Router)**
+- **TailwindCSS**
+- **React Context API** para gerenciamento de estado (flores, humor).
+- **Vercel v0.dev** para geração assistida de componentes.
+- **Firebase/Supabase** (persistência, auth) – opcional na fase MVP.
+
+### Estrutura de Pastas
+```
+/ (root)
+  /app
+    page.tsx            # Jardim (Home)
+    /psychologists      # Rota psicólogos
+      page.tsx
+    /recommendations    # Rota recomendações
+      page.tsx
+    /avatar            # Rota customização de avatar
+      page.tsx
+  /components
+    FlowerBloom.tsx
+    DailyCheckin.tsx
+    PsychologistCard.tsx
+    PsychologistList.tsx
+    Recommendations.tsx
+    AvatarCustomizer.tsx
+  /context
+    FlowerContext.tsx
+  /public
+    /images            # flores, sementes, backgrounds
+```
+
+### Pipeline de Desenvolvimento
+1. **Scaffold**
+   - `pnpm create next-app@latest . --ts --app` + Tailwind init.
+2. **Contexto Global**
+   - Implementar `FlowerContext` para saldo de flores e funções add/spend.
+3. **Home / Jardim**
+   - `FlowerBloom` + `DailyCheckin` + calendário (CSS Grid).
+   - Configurar gestos e setas.
+4. **Psicólogos**
+   - Criar cards, filtros e IA stub.
+   - Lógica de spend(spendFlowers).
+5. **Recomendações**
+   - Tabs, listagem, botão “Give 🌸”.
+6. **AvatarCustomizer**
+   - Dropdowns e preview.
+7. **Persistência MVP**
+   - Salvar state no localStorage.
+8. **Testes & UX**
+   - Mobile e Desktop.
+9. **Deploy**
+   - `pnpm build && pnpm start` no Vercel.
+
+---
+
+## 🚀 Considerações para Equipe
+
+- **Sem pressão de streaks**: evite contadores de dias. Foque em recompensas positivas.
+- **Time & Ferramentas**: equipe pode escolher libs (Framer Motion, React Query) desde que performance e UX sejam mantidos.
+- **Acessibilidade**: garantir contraste, labels e navegação por teclado.
+- **Internacionalização**: preparar strings para múltiplos idiomas.
+
+
+---
+
+# 🌻 Let’s Build Bloommy – Um Jardim de Emoções e Arte!
