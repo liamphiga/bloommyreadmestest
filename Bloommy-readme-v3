@@ -1,0 +1,163 @@
+# Bloommy 🌸 - README COMPLETO
+
+---
+
+## Índice
+
+- [Resumo do App](#resumo-do-app)
+- [Objetivos](#objetivos)
+- [Sessões do App](#sessões-do-app)
+- [Detalhamento de Funcionalidades](#detalhamento-de-funcionalidades)
+- [Art Style e Inspirações](#art-style-e-inspirações)
+- [Guia de Desenvolvimento](#guia-de-desenvolvimento)
+- [Regras Importantes](#regras-importantes)
+- [Considerações Finais](#considerações-finais)
+
+---
+
+## Resumo do App
+
+**Nome**: Bloommy 🌼 (com dois "o" e dois "m")
+
+**Tema**: Um jardim de flores para cuidar da sua saúde mental.
+
+**Conceito**: Toda vez que o usuário entra no app, ele planta uma nova flor, ganha uma "moeda-flor" e pode interagir com um espaço acolhedor que mistura psicologia, arte e um jardim virtual.
+
+**Plataformas**: Mobile-first (iOS e Android) + Web-App (posteriormente).
+
+---
+
+## Objetivos
+
+- Criar um ambiente leve e acolhedor para a saúde mental.
+- Incentivar o autocuidado sem gerar ansiedade (sem streaks diários).
+- Usar arte e natureza como elementos centrais.
+- Permitir socialização de forma positiva.
+
+---
+
+## Sessões do App
+
+- 🌼 **Home (Jardim Principal)**: Receber a nova flor do dia.
+- 🧑‍⚕️ **Sessão de Psicólogos**: Listagem e matchmaking com terapeutas.
+- 🎨 **Sessão de Recomendações de Arte**: Conteúdo personalizado (livros, filmes, séries, vídeos).
+- 🧑‍🎨 **Avatar (Bloommy Mii)**: Personalizar seu personagem.
+
+---
+
+## Detalhamento de Funcionalidades
+
+### 🌸 Jardim Principal
+- Check-in diário "Como você está hoje?" (Bem / Normal / Não tão bem).
+- Ganhar uma flor real por dia.
+- Jardins personalizados com suas flores coletadas.
+- Visualização semanal/mensal do humor no calendário.
+- Interface "parece uma arte" — simples, intuitiva e encantadora.
+
+### 🧑‍⚕️ Sessão de Psicólogos
+- Lista de psicólogos.
+- Descrição: Nome, idade, anos de experiência, especialidade (ex: luto, ansiedade).
+- Tipo de abordagem (ex: TCC, psicanálise, humanista).
+- Preferências culturais: filme favorito, série, livro.
+- Sistema de moedas-flores para agendamento de consultas.
+- Matchmaking inteligente por IA (tipo "Tinder" para terapeutas).
+
+### 🎨 Sessão de Recomendações de Arte
+- Biblioteca de recomendações segmentadas por situação (luto, ansiedade, estresse).
+- Recomendações diárias:
+  - Segunda: Livro
+  - Terça: Vídeo ou Palestra
+  - Sexta: Série
+  - Sábado: Filme
+  - Domingo: Obra de Arte
+- Avaliações positivas: "amei", "dei flor".
+- Mini-chatbot de IA para recomendações baseadas no humor.
+
+### 🧑‍🎨 Avatar (Bloommy Mii)
+- Personalizar pele, cabelo, roupa, acessórios.
+- Personagens aparecem "assistindo" ou "lendo" dentro das sessões de conteúdo.
+
+### 🌼 Social
+- Dar flores para outras pessoas.
+- Enviar mensagens positivas como "Tenha um lindo dia!".
+- Leaderboard (apenas visual) mostrando quem mais interagiu — **sem contador de dias seguidos**.
+
+---
+
+## Art Style e Inspirações
+
+### 🎨 Quabble: "Mindful Art"
+- Interface suave, cores pastéis, animações de pinceladas.
+- Atmosfera de relaxamento.
+- Sem pressão para streaks.
+- Feed de atividades leve.
+- [Link](https://quabble.app/)
+
+### 🌿 Flora: "Jardim Digital"
+- Metáfora de plantas reais.
+- Visual limpo e minimalista.
+- Feedback visual gentil.
+- Interação amistosa.
+- [Link](https://flora.appfinca.com/en/)
+
+### 🌼 Habits Garden: "Conexão Social"
+- Plantas crescem com hábitos cumpridos.
+- Leaderboard leve e amigável.
+- Visualização do progresso de outros usuários.
+- [Link](https://habitsgarden.com/my-habits)
+
+**➔ Importante**: Inspire-se nestes apps para:
+- Atmosfera artística.
+- Uso de cores suaves.
+- Incentivo sem cobrança de streak.
+- Sentimento de comunidade sem ansiedade.
+
+---
+
+## Guia de Desenvolvimento
+
+### 📐 Primeira Etapa: Estrutura Base
+- Criar projeto com Next.js + TailwindCSS.
+- Páginas principais: Home (Jardim), Psicólogos, Recomendações.
+- Componentes separados: Flor, Check-in, Jardim, Card Psicólogo, Card Arte.
+
+### 🧠 Segunda Etapa: Lógica Principal
+- Função de check-in diário.
+- Geração de flor diária (flor aleatória baseada no humor ou sorteada).
+- Banco de dados para armazenar usuário, humor diário e flores ganhas.
+- Cadastro de psicólogos.
+- Cadastro das recomendações de arte.
+
+### 🎨 Terceira Etapa: Front-end Detalhado
+- Animações suaves nas flores (ex: semente germinando).
+- Design "como uma obra de arte".
+- Integração do mini-chatbot para sugestões diárias.
+- Barra de navegação (arrastar no mobile / setas no desktop).
+
+### 🌎 Quarta Etapa: Backend e Infra
+- Banco de dados: Supabase ou Firebase.
+- Deploy no Vercel.
+- APIs para agendamento de sessões, envio de flores/mensagens.
+- Sistema de autenticação simplificado (Login Google/Apple).
+
+---
+
+## Regras Importantes
+
+- ❌ **Não exibir streak de dias**.
+- ✅ **Exibir apenas a coleção de flores e humor diário**.
+- ✅ **Design sempre suave e não poluído**.
+- ✅ **Interface que simule uma pintura viva**.
+- ✅ **Foco no social e acolhimento, não em competição ou pressão**.
+
+---
+
+## Considerações Finais
+
+O Bloommy deve ser um refúgio: leve, bonito, intuitivo, social e acolhedor. Nosso jardim não é para gerar pressão, é para florescer a mente e o coração.
+
+Qualquer dúvida de design, funcionalidade ou UX: inspire-se nos links do Quabble, Flora e Habits Garden. 🌸
+
+---
+
+**Vamos fazer o mundo florescer. 🌷✨**
