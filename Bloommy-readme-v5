@@ -254,4 +254,19 @@ Se quiser um acervo pronto para usar no seu repositório:
 
 ---
 
+## 🛍️Capítulo 11: Aba de Lojinha e Avatar (Swipe para Baixo)
+
+- Ao deslizar **para baixo** na tela do jardim, o usuário acessa a **Aba de Lojinha e Avatar**.
+- Nesta seção, é possível:
+  - **Comprar moedas-flores** (futura opção de compra com dinheiro real ou ganhos por atividades no app).
+  - **Personalizar o seu avatar** com roupas, acessórios e expressões.
+  - **Adquirir itens de decoração** para o jardim, como:
+    - Vasos de diferentes estilos
+    - Animais animados (abelhas, borboletas, corujas, etc.)
+    - Outros elementos interativos (pedras, lanternas, fontes de água)
+- Todas as compras e customizações são realizadas usando as **moedas-flores** acumuladas pelo usuário.
+- Inclua botões claros de “Comprar” ao lado de cada item e um preview em tempo real de como ficará no jardim ou no avatar.
+
+---
+
 Esse README serve como manual vivo de construção do Bloommy. Atualizações devem refletir novos módulos, insights de design, melhorias de UX e feedbacks dos usuários.
