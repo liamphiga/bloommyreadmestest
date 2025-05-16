@@ -1,0 +1,257 @@
+# 🌸 Bloommy: O Jardim da Saúde Mental
+
+> Um guia completo para a construção, filosofia, design, funcionalidades e arquitetura técnica do aplicativo **Bloommy** – uma experiência de bem-estar emocional gamificada e imersiva, centrada em flores reais e acompanhamento emocional gentil.
+
+---
+
+## 📘 Capítulo 1: Visão Geral do App
+
+### 🌼 O que é o Bloommy?
+
+**Bloommy** (com dois O’s e dois M’s) é um aplicativo de saúde mental inspirado em jardins e flores reais, onde cada interação emocional do usuário se transforma em um gesto simbólico de autocuidado. Cada check-in diário se transforma em uma flor distinta da vida real, com animação, descrição e posicionamento em um jardim pessoal.
+
+O app promove bem-estar, reflexão e conexão por meio de três áreas centrais:
+
+1. **Jardim Pessoal** (Home) – espaço de flores coletadas em troca de check-ins emocionais
+2. **Sessão de Psicólogos** – matchmaking com terapeutas com perfis completos
+3. **Recomendações de Arte e Mídia** – conteúdo terapêutico para momentos emocionais específicos
+
+---
+
+## 🌱 Capítulo 2: Funcionalidades Principais
+
+### 🏡 1. Jardim da Saúde Mental (Home)
+
+- Tela em **fullscreen** com um jardim animado que **preenche toda a interface**.
+- Elementos de UI são **flutuantes** e podem ser ocultados via botão toggle para contemplação imersiva.
+- Estilo visual inspirado diretamente no app **Quabble** ([link](https://quabble.app/)). Veja as imagens de referência abaixo:
+
+![Image](https://github.com/user-attachments/assets/2e0e824d-69af-4ca8-a16a-8c88703ac095)
+![Image](https://github.com/user-attachments/assets/9da49e05-05f4-4eee-b97d-6414ec38e1e4)
+![Image](https://github.com/user-attachments/assets/dc30b4ac-67e7-43f6-b3ee-71bf569bc70c)
+![Image](https://github.com/user-attachments/assets/7f336544-30f1-46a0-9b16-2826c62f6b7f)
+![Image](https://github.com/user-attachments/assets/38b21277-aebc-4c8d-bf0d-556791325407)
+![Image](https://github.com/user-attachments/assets/d550f0f6-56a5-4310-85c4-8b05a9cba5ba)
+![Image](https://github.com/user-attachments/assets/f6537f3c-67bb-4f86-b807-33b3967db9bd)
+![Image](https://github.com/user-attachments/assets/39f9574e-47ff-4fbb-aeb3-99a664b52dda)
+![Image](https://github.com/user-attachments/assets/ae7c48c1-ba9a-48e3-9cc2-8889d6af37ef)
+![Image](https://github.com/user-attachments/assets/27af48c8-9fab-44a2-98ce-2193198b4be6)
+![Image](https://github.com/user-attachments/assets/83370f8e-b88e-4a00-bf86-b345e4200b8d)
+
+### 🌞 2. Check-up Diário
+
+- Todos os dias, surge **um balão perguntando “Como foi seu dia hoje?”** no jardim.
+- O usuário seleciona:
+  - Se o dia foi **bom / neutro / ruim**
+  - Quais sentimentos vivenciou (**alegria, tristeza, medo, raiva, ansiedade...**) – pode marcar múltiplos
+  - Um campo opcional de **comentário textual sobre o dia**
+- Após o check-up:
+  - Ganha-se uma **flor da vida real** com uma animação de **nascimento e desabrochar**
+  - A flor é plantada automaticamente no jardim
+- Cada flor é única e possui:
+  - **Nome da flor**
+  - **Data de obtenção**
+  - **Check-up relacionado**
+  - **Significado simbólico da flor** (ex: girassol = esperança)
+
+---
+
+## 🧠 Capítulo 3: Inspiração de Design e Apps Referência
+
+### 1. **Quabble**
+- Inspiração central em design visual
+- Interface fullscreen com visual artístico e atmosférico
+- Link: [https://quabble.app/](https://quabble.app/)
+
+### 2. **Flora – Focus App**
+- Sistema de crescimento de plantas com progressão por cuidado
+- Similaridade com o sistema de flores diárias no Bloommy
+- Link: [https://flora.appfinca.com/en/](https://flora.appfinca.com/en/)
+
+### 3. **Habits Garden**
+- Progresso emocional via crescimento de jardim
+- Inspiração na gamificação suave e visualização do progresso
+- Destaque: presença de avatar e leaderboard social
+- Link: [https://habitsgarden.com/my-habits](https://habitsgarden.com/my-habits)
+
+---
+
+## 🧩 Capítulo 4: Sessão de Psicólogos
+
+- Psicólogos têm **perfis personalizados** com:
+  - Nome, idade, especialização (ex: luto, relacionamentos)
+  - **Tipo de abordagem:** TCC, psicanálise, terapia humanista...
+  - Preferências pessoais: filmes, livros, músicas favoritas
+  - Valor da sessão em **moedas-flores**
+- Sessão de matchmaking via filtros manuais + recomendação por IA
+- Interface estilo Tinder para recomendação ideal de terapeuta
+- Exibição de agenda e disponibilidade
+
+---
+
+## 🎨 Capítulo 5: Estilo Visual e Direção de Arte
+
+- Estética **pictórica, suave e naturalista**, como uma pintura viva
+- UI minimalista e intuitiva, com modo “esconder UI” para contemplação
+- Fontes legíveis e humanizadas
+- Transições com animações florais (flores desabrochando, vento suave, brilhos)
+- A navegação deve parecer **fluir como folhas ao vento**
+
+---
+
+## 🧑‍💻 Capítulo 6: Arquitetura Técnica e Desenvolvimento
+
+> Este guia serve para liderar um time de desenvolvimento (designers, engenheiros front/back, IA e DevOps)
+
+### 🔧 Tecnologias recomendadas
+- **Next.js** + **React** para front-end SPA (foco mobile-first e PWA)
+- **Tailwind CSS** para UI modular e leve
+- **Firebase** ou **Supabase** para autenticação e banco de dados simples
+- **Node.js** com Express ou Functions (para lógica backend leve)
+- **OpenAI ou Cohere API** para motor de recomendação com IA
+
+### 📐 Estrutura Modular
+
+```
+/pages
+  index.tsx (Garden View)
+  /psychologists
+  /recommendations
+/components
+  FlowerAnimation.tsx
+  DailyCheckinModal.tsx
+  TherapistCard.tsx
+  AvatarBuilder.tsx
+/styles
+  tailwind.config.js
+  global.css
+/public
+  /flowers (imagem das flores)
+```
+
+### 📱 Navegação
+- Swipe left = Recomendação de Arte
+- Swipe right = Psicólogos
+- Swipe down = Calendário emocional
+- Swipe up = Configurações
+- Web version: ícones laterais aparecem ao aproximar o cursor
+
+---
+
+## 7. Navegação e Prototipagem
+
+- A tela inicial (home) do app é o **Jardim** — o usuário sempre inicia aqui.
+- Para navegar para a aba de recomendações, o usuário deve fazer um **swipe para a esquerda**.
+- Para navegar para a aba de psicólogos, o usuário deve fazer um **swipe para a direita**.
+- Essa navegação lateral por swipe deve ser suave, intuitiva, e bem responsiva, tanto no mobile quanto no web (no web, usar setas visuais clicáveis nas laterais da tela).
+- Como estamos desenvolvendo um protótipo, é essencial incluir na tela de **Configurações**:
+  - Um **botão oculto** para **resetar o app** (limpar dados locais, reiniciar o estado).
+  - Um **botão oculto** para **alterar a quantidade de moedas-flor ganhas** (útil para testes e ajustes durante o desenvolvimento).
+
+---
+
+## 🌐 Capítulo 8: Algumas considerações importantes
+
+- O Bloommy não possui contador de streak ou dias seguidos para **não gerar ansiedade**
+- O foco é bem-estar, não performance
+- O usuário nunca é penalizado por não entrar
+- A UI é pensada para acolher, não pressionar
+
+---
+
+## 📁 Capítulo 9: Fontes de Dados para App de Recomendações de Arte
+
+Aqui estão os principais bancos de dados e APIs **gratuitos** para puxar informações sobre filmes, séries, livros, música, arte e natureza:
+
+### 🎬 Filmes & Séries
+
+| Fonte                   | Link                                           | Como Usar                                                                 |
+|------------------------|------------------------------------------------|---------------------------------------------------------------------------|
+| **The Movie Database** (TMDB) | [tmdb.org](https://www.themoviedb.org/)          | Cadastre-se, pegue uma API Key e use a [documentação](https://developers.themoviedb.org/3). |
+| **OMDb API**           | [omdbapi.com](http://www.omdbapi.com/)        | Pegue uma chave gratuita e faça requests simples (ex.: `?t=Matrix`).     |
+| **IMDb Datasets**      | [imdb.com/interfaces](https://www.imdb.com/interfaces/) | Baixe os arquivos .tsv e processe localmente.                             |
+
+### 📚 Livros
+
+| Fonte             | Link                                              | Como Usar                                                                 |
+|------------------|---------------------------------------------------|---------------------------------------------------------------------------|
+| **Open Library**  | [openlibrary.org](https://openlibrary.org/)      | Use a [API](https://openlibrary.org/developers/api) para buscar livros por título, autor ou ISBN. |
+| **Google Books API** | [developers.google.com/books](https://developers.google.com/books) | Requisições GET com parâmetros como `q=harry+potter`.                    |
+
+### 🎵 Música
+
+| Fonte           | Link                                               | Como Usar                                                                 |
+|----------------|----------------------------------------------------|---------------------------------------------------------------------------|
+| **MusicBrainz** | [musicbrainz.org](https://musicbrainz.org/)       | Consulte a [API](https://musicbrainz.org/doc/Development/XML_Web_Service/Version_2) para artistas, álbuns e músicas. |
+| **Discogs**     | [discogs.com/developers](https://www.discogs.com/developers) | Pegue uma chave e busque por artistas, discos, etc.                       |
+
+### 🎨 Arte (Pinturas, Fotografia, etc.)
+
+| Fonte               | Link                                         | Como Usar                                               |
+|--------------------|----------------------------------------------|---------------------------------------------------------|
+| **Rijksmuseum API** | [data.rijksmuseum.nl](https://data.rijksmuseum.nl) | API aberta, sem chave. Busque por obras de arte.       |
+| **MET Museum API** | [metmuseum.github.io](https://metmuseum.github.io/) | Dados de obras de arte em domínio público.             |
+
+### 🌸 Flores & Plantas
+
+| Fonte                               | Link                                                                 | Como Usar                                                                 |
+|------------------------------------|----------------------------------------------------------------------|---------------------------------------------------------------------------|
+| **Trefle.io** (Banco de dados botânico) | [trefle.io](https://trefle.io/)                                     | API gratuita com +450k espécies de plantas. Requer cadastro para chave.  |
+| **Flora-On** (Plantas de Portugal) | [flora-on.pt](https://flora-on.pt/)                                  | Dados abertos em formato CSV/API.                                        |
+| **OpenHerbarium**                  | [openherbarium.org](https://openherbarium.org/)                      | Imagens e dados de herbários globais.                                    |
+| **iNaturalist**                    | [inaturalist.org](https://www.inaturalist.org/)                      | API com fotos de plantas/flores submetidas por usuários.                 |
+| **Wikimedia Commons (Categoria Flores)** | [commons.wikimedia.org/wiki/Category:Flowers](https://commons.wikimedia.org/wiki/Category:Flowers) | Imagens em domínio público. |
+
+### 🌼 Onde baixar imagens de flores para testes
+
+Se quiser um acervo pronto para usar no seu repositório:
+
+- **Wikimedia Commons**:
+  - Rosas
+  - Orquídeas  
+  *(Links diretos para imagens em domínio público)*
+
+- **Dataset público no Kaggle**:
+  - *Flowers Recognition* (5.2k imagens)
+
+**Exemplo de estrutura no seu repositório:**
+
+
+### 🌍 Dados Gerais
+
+| Fonte       | Link                                          | Como Usar                                     |
+|------------|-----------------------------------------------|-----------------------------------------------|
+| **Wikidata** | [wikidata.org](https://www.wikidata.org)     | Use [SPARQL](https://query.wikidata.org/) para consultas avançadas. |
+
+---
+
+## 👤 Capítulo 10: Avatar Animado e Interativo
+
+- O avatar do Bloommy é um personagem 2D estilizado, inspirado nos avatares Mii da Nintendo, mas adaptado para se integrar ao estilo artístico do app.
+- Ele fica caminhando pelo jardim em segundo plano e realiza interações aleatórias para tornar o ambiente mais vivo e acolhedor, como:
+  - Assobiar
+  - Sorrir
+  - Cheirar flores
+  - Meditar
+  - Ler um livro
+  - Alongar-se
+  - Tocar violão
+- Utilize estas referências visuais do “My Nintendo” para desenhar as poses e animações do avatar:
+  
+  ![Image](https://github.com/user-attachments/assets/8601e205-47d0-4c74-9f3e-33746da173c6)
+  
+  ![Image](https://github.com/user-attachments/assets/f59fe677-d7b0-49d5-9a80-20770bc7c4b2)
+  
+  ![Image](https://github.com/user-attachments/assets/3eb2b6ec-ca92-4979-b4d9-c09ec119c420)
+  
+  ![Image](https://github.com/user-attachments/assets/2be449b5-8147-46e6-bc41-110d4f98176c)
+  
+  ![Image](https://github.com/user-attachments/assets/2072c1aa-7c3c-4bac-8f5a-e5cdf3efa460)
+  
+  ![Image](https://github.com/user-attachments/assets/fb36b262-5a15-4395-8a87-0f665eb266af)
+  
+- Essas animações devem ocorrer de forma sutil e esporádica, reforçando a sensação de um jardim vivo e dinâmico, sem distrair excessivamente o usuário.
+
+---
+
+Esse README serve como manual vivo de construção do Bloommy. Atualizações devem refletir novos módulos, insights de design, melhorias de UX e feedbacks dos usuários.
